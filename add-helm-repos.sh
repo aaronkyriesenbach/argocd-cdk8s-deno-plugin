@@ -1,7 +1,7 @@
 #!/bin/bash
 
-in_file="${HELM_CHARTS_FILE:-cdk8s.yaml}"
-key="${HELM_CHARTS_KEY:-helmCharts}"
+in_file="${HELM_REPOS_FILE:-cdk8s.yaml}"
+key="${HELM_REPOS_KEY:-helmRepos}"
 
 if [ ! -f $in_file ]; then
   echo "Input file $in_file does not exist"
