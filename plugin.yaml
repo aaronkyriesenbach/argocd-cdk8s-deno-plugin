@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ConfigManagementPlugin
+metadata:
+  name: cdk8s-deno
+spec:
+  version: v1.0.0-SNAPSHOT
+  init:
+    command: [add-helm-repos]
+  generate:
+    command: [deno, task, synth]
+  discover:
+    fileName: "deno.json"
